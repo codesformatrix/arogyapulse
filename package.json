@@ -1,0 +1,62 @@
+{
+  "name": "arogyapulse",
+  "version": "1.0.0",
+  "description": "ArogyaPulse - AI-driven health centre operations and district medicine supply-chain management for PHCs and CHCs (Smart Health hackathon MVP).",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node scripts/seed.mjs",
+    "seed:memory": "node scripts/seed.mjs --memory",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand --forceExit",
+    "test:coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand --forceExit --coverage",
+    "test:unit": "cross-env NODE_OPTIONS=--experimental-vm-modules jest tests/unit --runInBand --forceExit",
+    "test:integration": "cross-env NODE_OPTIONS=--experimental-vm-modules jest tests/integration --runInBand --forceExit"
+  },
+  "keywords": [
+    "health",
+    "phc",
+    "chc",
+    "supply-chain",
+    "inventory",
+    "google-cloud",
+    "cloud-run",
+    "firestore",
+    "gemini",
+    "pwa"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "2.30.0",
+    "compression": "1.8.2",
+    "cookie-parser": "1.4.7",
+    "cors": "2.8.6",
+    "express": "4.22.3",
+    "express-rate-limit": "8.7.1",
+    "firebase-admin": "13.10.0",
+    "helmet": "8.3.0",
+    "jsonwebtoken": "9.0.3",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "cross-env": "10.1.0",
+    "eslint": "10.13.0",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "17.13.0",
+    "jest": "30.5.2",
+    "jest-axe": "11.0.0",
+    "jest-environment-jsdom": "30.5.2",
+    "prettier": "3.9.10",
+    "supertest": "7.3.1"
+  }
+}

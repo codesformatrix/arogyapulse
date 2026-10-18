@@ -1,0 +1,19 @@
+{
+  "singleQuote": true,
+  "semi": true,
+  "trailingComma": "all",
+  "printWidth": 108,
+  "tabWidth": 2,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": ["*.md"],
+      "options": { "proseWrap": "preserve" }
+    },
+    {
+      "files": ["src/public/**/*.css"],
+      "options": { "printWidth": 100 }
+    }
+  ]
+}
